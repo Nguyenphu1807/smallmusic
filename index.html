@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<style>
+    body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    }
+    :root{
+        --to:300px;
+        --vua:200px;
+        --nho:100px;
+    }
+    input#input-file {
+    color: white;
+}
+    .main{
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7); 
+    }
+    .on{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .to img, .vua img, .nho img{
+        background-image: url(/phonicsong.jpg);
+        background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 5%;
+    background-size: contain;
+    }
+    .to{
+        position: relative;
+        z-index: 6;
+    }
+    .to img{
+        height: var(--to);
+        width: var(--to);
+    }
+    .vua{
+        width: calc(var(--to) + var(--vua));
+        position: absolute;
+        z-index: 4;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chevua{
+        height: var(--vua);
+        width: calc(var(--to) + var(--vua));
+        position: absolute;
+        z-index: 5;
+    }
+    .vua img{
+        width: var(--vua);
+        height: var(--vua);
+    }
+    .nho{
+        width: calc(var(--to) + var(--vua) + var(--nho));
+        position: absolute;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .chenho{
+        width: calc(var(--to) + var(--vua) + var(--nho));
+        height: var(--nho);
+        position: absolute;
+        z-index: 2;
+    }
+    .nho img{
+        width: var(--nho);
+        height: var(--nho);
+    }
+    .in{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .chenho {
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    .chevua{
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+</style>
+<body>
+    <img src="/hinh-nen-may-tinh-4k-game-min.jpg" style="width: 100vw; height: 100vh;">
+    <div class="main">
+        <div class="on">
+            <div class="to">
+                <div class="ten">
+                    <div class="tento"></div>
+                    <div class="tennho"></div>
+                </div>
+                <img src="/phonicsong.jpg">
+            </div>
+            <div class="chevua"></div>
+            <div class="vua">
+                <img src="/phonicsong.jpg">
+                <img src="/phonicsong.jpg">
+            </div>
+            <div class="chenho"></div>
+            <div class="nho">
+                <img src="/phonicsong.jpg">
+                <img src="/phonicsong.jpg">
+            </div>
+        </div>
+        <div class="in">
+            <p><input type="file" id="input-file" accept="audio/*" /></p>
+<p><audio loop id="audio" controls="controls"></p>
+<canvas id="canvas" style="width: 500px; height: 50px"></canvas>
+        </div>
+        <div class="down">
+        </div>
+</div>
+</body>
+<script src="/main.js"></script>
+</html>
